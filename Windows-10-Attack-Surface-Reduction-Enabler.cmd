@@ -7,15 +7,16 @@
 ::    https://raw.githubusercontent.com/atlantsecurity/windows-hardening-scripts/main/Windows-10-Hardening-script.cmd
 ::
 ::###############################################################################################################
-:: Credits and More info: https://github.com/atlantsecurity/
-::                        https://gist.github.com/mackwage/08604751462126599d7e52f233490efe
-::                        https://github.com/LOLBAS-Project/LOLBAS
-::                        https://lolbas-project.github.io/
-::                        https://github.com/Disassembler0/Win10-Initial-Setup-Script
-::                        https://github.com/cryps1s/DARKSURGEON/tree/master/configuration/configuration-scripts
-::                        https://gist.github.com/alirobe/7f3b34ad89a159e6daa1#file-reclaimwindows10-ps1-L71
-::                        https://github.com/teusink/Home-Security-by-W10-Hardening
-::                        https://gist.github.com/ricardojba/ecdfe30dadbdab6c514a530bc5d51ef6
+:: Credits and More info: 
+::    https://github.com/atlantsecurity/
+::    https://gist.github.com/mackwage/08604751462126599d7e52f233490efe
+::    https://github.com/LOLBAS-Project/LOLBAS
+::    https://lolbas-project.github.io/
+::    https://github.com/Disassembler0/Win10-Initial-Setup-Script
+::    https://github.com/cryps1s/DARKSURGEON/tree/master/configuration/configuration-scripts
+::    https://gist.github.com/alirobe/7f3b34ad89a159e6daa1#file-reclaimwindows10-ps1-L71
+::    https://github.com/teusink/Home-Security-by-W10-Hardening
+::    https://gist.github.com/ricardojba/ecdfe30dadbdab6c514a530bc5d51ef6
 ::
 ::###############################################################################################################
 ::###############################################################################################################
@@ -64,22 +65,22 @@ powershell.exe -ExecutionPolicy Bypass -Command "Checkpoint-Computer -Descriptio
 :: ---------------------
 ::###############################################################################################################
 :: ASR Rules Enabled (not according to order)
-:: 				Block executable content from email client and webmail
-:: 				Block all Office applications from creating child processes
-:: 				Block Office applications from creating executable content
-:: 				Block Office applications from injecting code into other processes
-:: 				Block JavaScript or VBScript from launching downloaded executable content
-:: 				Block execution of potentially obfuscated scripts
-:: 				Block Win32 API calls from Office macros
-:: 				Block executable files from running unless they meet a prevalence, age, or trusted list criterion
-:: 				Use advanced protection against ransomware
-:: 				Block credential stealing from the Windows local security authority subsystem (lsass.exe)
-:: 				Block process creations originating from PSExec and WMI commands
-:: 				Block untrusted and unsigned processes that run from USB
-:: 				Block Office communication application from creating child processes
-:: 				Block Adobe Reader from creating child processes
-:: 				Block persistence through WMI event subscription
-:: 				Block abuse of exploited vulnerable signed drivers
+::    Block executable content from email client and webmail
+::    Block all Office applications from creating child processes
+::    Block Office applications from creating executable content
+::    Block Office applications from injecting code into other processes
+::    Block JavaScript or VBScript from launching downloaded executable content
+::    Block execution of potentially obfuscated scripts
+::    Block Win32 API calls from Office macros
+::    Block executable files from running unless they meet a prevalence, age, or trusted list criterion
+::    Use advanced protection against ransomware
+::    Block credential stealing from the Windows local security authority subsystem (lsass.exe)
+::    Block process creations originating from PSExec and WMI commands
+::    Block untrusted and unsigned processes that run from USB
+::    Block Office communication application from creating child processes
+::    Block Adobe Reader from creating child processes
+::    Block persistence through WMI event subscription
+::    Block abuse of exploited vulnerable signed drivers
 :: ---------------------
 :: Stop some of the most common SMB based lateral movement techniques dead in their tracks
 powershell.exe Set-MpPreference -AttackSurfaceReductionRules_Ids D1E49AAC-8F56-4280-B9BA-993A6D -AttackSurfaceReductionRules_Actions Enabled
